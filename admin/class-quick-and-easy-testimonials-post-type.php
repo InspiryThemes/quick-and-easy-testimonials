@@ -174,7 +174,7 @@ class Quick_And_Easy_Testimonials_Post_Type {
      * @since  1.0.0
      * @return string       	html image tag
      */
-    protected function get_image ( $id, $size ) {
+    public static function get_image ( $id, $size ) {
         $response = '';
 
         if ( has_post_thumbnail( $id ) ) {
@@ -185,7 +185,7 @@ class Quick_And_Easy_Testimonials_Post_Type {
             } elseif ( ! is_string( $size ) && ! is_array( $size ) ) {
                 $size = array( 50, 50 );
             }
-            $response = get_the_post_thumbnail( intval( $id ), $size, array( 'class' => 'qe-testimonial-avatar' ) );
+            $response = get_the_post_thumbnail( intval( $id ), $size, array( 'class' => 'avatar' ) );
 
         } else {
 
