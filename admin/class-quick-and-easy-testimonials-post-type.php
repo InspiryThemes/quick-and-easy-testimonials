@@ -158,7 +158,7 @@ class Quick_And_Easy_Testimonials_Post_Type {
         switch ( $column_name ) {
 
             case 'image':
-                $value = $this->get_image( $post->ID, 100 );
+                $value = $this->get_image( $post->ID, 'thumbnail' );
                 echo $value;
                 break;
 
@@ -178,19 +178,41 @@ class Quick_And_Easy_Testimonials_Post_Type {
         $response = '';
 
         if ( has_post_thumbnail( $id ) ) {
+
             // If not a string or an array, and not an integer, default to 150x9999.
             if ( ( is_int( $size ) || ( 0 < intval( $size ) ) ) && ! is_array( $size ) ) {
                 $size = array( intval( $size ), intval( $size ) );
             } elseif ( ! is_string( $size ) && ! is_array( $size ) ) {
                 $size = array( 50, 50 );
             }
-            $response = get_the_post_thumbnail( intval( $id ), $size, array( 'class' => 'avatar' ) );
+            $response = get_the_post_thumbnail( intval( $id ), $size, array( 'class' => 'qe-testimonial-avatar' ) );
+
         } else {
+
             $gravatar_email = get_post_meta( $id, '_gravatar_email', true );
             $gravatar_email = is_email( $gravatar_email );
+
             if ( $gravatar_email  ) {
+
+                if ( ( is_int( $size ) || ( 0 < intval( $size ) ) ) && ! is_array( $size ) ) {
+                    $size = intval( $size );
+                } elseif ( ! is_string( $size ) && ! is_array( $size ) ) {
+                    $size = 50;
+                } elseif( is_string( $size ) ) {
+                    global $_wp_additional_image_sizes;
+                    if ( in_array( $size , array( 'thumbnail', 'medium', 'large' ) ) ) {
+                        $size = intval( get_option( $size . '_size_w' ) );
+                    } elseif ( isset( $_wp_additional_image_sizes[ $size ] ) ) {
+                        $size = intval( $_wp_additional_image_sizes[ $size ]['width'] );
+                    }
+                } elseif ( is_array( $size ) ) {
+                    $size = intval( $size[0] );
+                }
+
                 $response = get_avatar( $gravatar_email, $size );
+
             }
+
         }
 
         return $response;
