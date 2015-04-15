@@ -2,3 +2,19 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+.qe-testimonial-wrapper {
+  margin-bottom: 1.5em;
+}
+.qe-testimonial-wrapper .qe-testimonial-img {
+  text-align: center;
+  margin: 10px 0;
+}
+.qe-testimonial-wrapper img.avatar {
+  display: inline-block;
+}
+.qe-testimonial-author {
+  text-align: center;
+}
+.qe-testimonial-author span {
+  display: block;
+}
