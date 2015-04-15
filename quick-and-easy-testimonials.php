@@ -30,6 +30,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define( 'QE_TESTIMONIALS_BASE', plugin_basename(__FILE__) );
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-quick-and-easy-testimonials-activator.php
