@@ -1,5 +1,4 @@
 <?php
-
 /**
  *
  * @link              http://saqibsarwar.com/
@@ -30,7 +29,7 @@ define( 'QE_TESTIMONIALS_BASE', plugin_basename(__FILE__) );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-quick-and-easy-testimonials-activator.php
  */
-function activate_plugin_name() {
+function activate_quick_and_easy_testimonials() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-quick-and-easy-testimonials-activator.php';
 	Quick_And_Easy_Testimonials_Activator::activate();
 }
@@ -39,13 +38,13 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-quick-and-easy-testimonials-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate_quick_and_easy_testimonials() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-quick-and-easy-testimonials-deactivator.php';
 	Quick_And_Easy_Testimonials_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
+register_activation_hook( __FILE__, 'activate_quick_and_easy_testimonials' );
+register_deactivation_hook( __FILE__, 'deactivate_quick_and_easy_testimonials' );
 
 /**
  * The core plugin class that is used to define internationalization,
