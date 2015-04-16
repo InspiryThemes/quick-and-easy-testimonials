@@ -121,6 +121,7 @@ class Quick_And_Easy_Testimonials_Public {
         extract( shortcode_atts( array(
             'count' => -1,
             'filter' => null,
+            'id' => null,
         ), $attributes ) );
 
         $filter_array = array();
@@ -136,6 +137,10 @@ class Quick_And_Easy_Testimonials_Public {
             'post_type' => 'testimonial',
             'posts_per_page' => $count,
         );
+
+        if ( ! empty ( $id ) && 0 < intval( $id ) ) {
+            $testimonials_query_args['p'] = intval( $id );
+        }
 
         if ( ! empty ( $filter_array ) ) {
             $testimonials_query_args['tax_query'] = array(
