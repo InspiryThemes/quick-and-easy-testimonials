@@ -34,7 +34,7 @@ This plugin provides a quick and easy way to add testimonials to your site.
 
 == Installation ==
 
-1. Unzip the download package
+1. Unzip the downloaded package
 1. Upload `quick-and-easy-testimonials` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
