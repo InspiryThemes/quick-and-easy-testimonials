@@ -3,18 +3,53 @@
  * included in this file.
  */
 .qe-testimonial-wrapper {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
+  overflow: hidden;
+}
+.qe-testimonial-wrapper .qe-testimonial-meta {
+  box-sizing: border-box;
+  width: 20%;
+  float: left;
 }
 .qe-testimonial-wrapper .qe-testimonial-img {
   text-align: center;
-  margin: 10px 0;
 }
-.qe-testimonial-wrapper img.avatar {
+.qe-testimonial-wrapper .qe-testimonial-img a {
   display: inline-block;
+  border: none;
 }
-.qe-testimonial-author {
+.qe-testimonial-wrapper .qe-testimonial-img img.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+.qe-testimonial-wrapper .qe-testimonial-author {
   text-align: center;
 }
-.qe-testimonial-author span {
+.qe-testimonial-wrapper .qe-testimonial-author span {
   display: block;
+}
+.qe-testimonial-wrapper .qe-testimonial-text {
+  box-sizing: border-box;
+  width: 80%;
+  float: left;
+}
+@media (max-width: 600px) {
+  .qe-testimonial-wrapper {
+    margin-bottom: 1.8em;
+  }
+  .qe-testimonial-wrapper .qe-testimonial-meta {
+    width: 100%;
+    float: none;
+  }
+  .qe-testimonial-wrapper .qe-testimonial-img {
+    margin: 1em 0;
+  }
+  .qe-testimonial-wrapper .qe-testimonial-text {
+    width: 100%;
+    float: none;
+  }
 }

@@ -3,18 +3,67 @@
  * included in this file.
  */
 .qe-testimonial-wrapper{
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
+  overflow: hidden;
+
+  .qe-testimonial-meta{
+    box-sizing: border-box;
+    width: 20%;
+    float: left;
+  }
+
   .qe-testimonial-img{
+    // margin: 1em 1em 1em 0;
     text-align: center;
-    margin: 10px 0;
+    a{
+      display: inline-block;
+      border: none;
+    }
+    img.avatar{
+      display: inline-block;
+      border-radius: 50%;
+      max-width: 100px;
+      max-height: 100px;
+      width: auto;
+      height: auto;
+    }
   }
-  img.avatar{
-    display: inline-block;
+
+  .qe-testimonial-author{
+    text-align: center;
+    span{
+      display: block;
+    }
   }
+
+  .qe-testimonial-text{
+    box-sizing: border-box;
+    width: 80%;
+    float: left;
+  }
+
 }
-.qe-testimonial-author{
-  text-align: center;
-  span{
-    display: block;
+
+// for smaller screens
+@media ( max-width: 600px ) {
+
+  .qe-testimonial-wrapper{
+    margin-bottom: 1.8em;
+
+    .qe-testimonial-meta{
+      width: 100%;
+      float: none;
+    }
+
+    .qe-testimonial-img{
+      margin: 1em 0;
+    }
+
+    .qe-testimonial-text{
+      width: 100%;
+      float: none;
+    }
+
   }
+
 }

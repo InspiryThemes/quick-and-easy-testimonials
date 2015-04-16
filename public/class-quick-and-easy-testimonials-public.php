@@ -172,33 +172,39 @@ class Quick_And_Easy_Testimonials_Public {
                 ?>
                 <div id="qe-testimonial-<?php the_ID(); ?>" class="qe-testimonial-wrapper" itemprop="review" itemscope itemtype="http://schema.org/Review">
 
+                    <div class="qe-testimonial-meta">
+                        <?php
+                        $testimonial_email = is_email( $testimonial_email );
+                        if ( $testimonial_email || has_post_thumbnail( get_the_ID() ) ) {
+                            echo '<div class="qe-testimonial-img">';
+                            echo empty ( $testimonial_url ) ? '' : '<a href="' . $testimonial_url . '" target="_blank">' ;
+                            echo Quick_And_Easy_Testimonials_Post_Type::get_image( get_the_ID(), 'thumbnail' );
+                            echo empty ( $testimonial_url ) ? '' : '</a>' ;
+                            echo '</div>';
+                        }
+                        ?>
+
+                        <cite class="qe-testimonial-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            <span class="qe-testimonial-name" itemprop="name"><?php the_title(); ?></span>
+                            <?php
+                            if ( ! empty ( $testimonial_byline ) ) {
+                                ?>
+                                <span class="qe-testimonial-byline" itemprop="jobTitle">
+                                <?php
+                                echo empty ( $testimonial_url ) ? '' : '<a href="' . $testimonial_url . '" target="_blank">' ;
+                                echo $testimonial_byline;
+                                echo empty ( $testimonial_url ) ? '' : '</a>' ;
+                                ?>
+                            </span>
+                            <?php
+                            }
+                            ?>
+                        </cite>
+                    </div>
+
                     <blockquote class="qe-testimonial-text" itemprop="reviewBody">
                         <?php the_content(); ?>
                     </blockquote>
-
-                    <?php
-                    $testimonial_email = is_email( $testimonial_email );
-                    if ( $testimonial_email || has_post_thumbnail( get_the_ID() ) ) {
-                        echo '<div class="qe-testimonial-img">';
-                        echo empty ( $testimonial_url ) ? '' : '<a href="' . $testimonial_url . '" target="_blank">' ;
-                        echo Quick_And_Easy_Testimonials_Post_Type::get_image( get_the_ID(), 'thumbnail' );
-                        echo empty ( $testimonial_url ) ? '' : '</a>' ;
-                        echo '</div>';
-                    }
-                    ?>
-
-                    <cite class="qe-testimonial-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                        <span class="qe-testimonial-name" itemprop="name"><?php the_title(); ?></span>
-                        <?php
-                        if ( ! empty ( $testimonial_byline ) ) {
-                            ?><span class="qe-testimonial-byline" itemprop="jobTitle"><?php echo $testimonial_byline; ?></span><?php
-                        }
-
-                        if ( ! empty ( $testimonial_url ) ) {
-                            ?><span class="qe-testimonial-url"><a href="<?php echo $testimonial_url; ?>" itemprop="url"><?php echo htmlentities( $testimonial_url ); ?></a></span><?php
-                        }
-                        ?>
-                    </cite>
 
                 </div>
                 <?php
