@@ -2,18 +2,29 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
 .qe-testimonial-wrapper{
   margin-bottom: 1.8em;
   overflow: hidden;
 
-  .qe-testimonial-meta{
-    box-sizing: border-box;
-    width: 20%;
-    float: left;
+  .qe-testimonial-text{
+    font-size: 1em;
+    margin: 1em;
+    line-height: 1.6em;
+    border: none;
+    padding: 0;
+    background: transparent;
+    p {
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      font-style: italic;
+      font-weight: 400;
+    }
   }
 
   .qe-testimonial-img{
-    // margin: 1em 1em 1em 0;
+    margin: 1em 0;
     text-align: center;
     a{
       display: inline-block;
@@ -31,39 +42,10 @@
 
   .qe-testimonial-author{
     text-align: center;
+    font-style: normal;
     span{
       display: block;
     }
-  }
-
-  .qe-testimonial-text{
-    box-sizing: border-box;
-    width: 80%;
-    float: left;
-  }
-
-}
-
-// for smaller screens
-@media ( max-width: 600px ) {
-
-  .qe-testimonial-wrapper{
-    margin-bottom: 1.8em;
-
-    .qe-testimonial-meta{
-      width: 100%;
-      float: none;
-    }
-
-    .qe-testimonial-img{
-      margin: 1em 0;
-    }
-
-    .qe-testimonial-text{
-      width: 100%;
-      float: none;
-    }
-
   }
 
 }

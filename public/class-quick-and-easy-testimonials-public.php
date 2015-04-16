@@ -173,6 +173,7 @@ class Quick_And_Easy_Testimonials_Public {
                 <div id="qe-testimonial-<?php the_ID(); ?>" class="qe-testimonial-wrapper" itemprop="review" itemscope itemtype="http://schema.org/Review">
 
                     <div class="qe-testimonial-meta">
+
                         <?php
                         $testimonial_email = is_email( $testimonial_email );
                         if ( $testimonial_email || has_post_thumbnail( get_the_ID() ) ) {
@@ -195,18 +196,19 @@ class Quick_And_Easy_Testimonials_Public {
                                 echo $testimonial_byline;
                                 echo empty ( $testimonial_url ) ? '' : '</a>' ;
                                 ?>
-                            </span>
-                            <?php
+                                </span><!-- /.qe-testimonial-byline -->
+                                <?php
                             }
                             ?>
-                        </cite>
-                    </div>
+                        </cite><!-- /.qe-testimonial-author -->
+
+                    </div><!-- /.qe-testimonial-meta -->
 
                     <blockquote class="qe-testimonial-text" itemprop="reviewBody">
                         <?php the_content(); ?>
-                    </blockquote>
+                    </blockquote><!-- /.qe-testimonial-text -->
 
-                </div>
+                </div><!-- /.qe-testimonial-wrapper -->
                 <?php
             endwhile;
         endif;
