@@ -7,7 +7,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Quick and Easy Testimonials
- * Plugin URI:        https://github.com/saqibsarwar/Quick-and-Easy-Testimonials
+ * Plugin URI:        https://github.com/saqibsarwar/quick-and-easy-testimonials
  * Description:       This plugin provides a quick and easy way to add testimonials to your site.
  * Version:           1.0.0
  * Author:            M Saqib Sarwar
