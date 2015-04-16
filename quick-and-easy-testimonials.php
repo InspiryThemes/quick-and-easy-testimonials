@@ -1,12 +1,6 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
  *
  * @link              http://saqibsarwar.com/
  * @since             1.0.0
@@ -15,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       Quick and Easy Testimonials
  * Plugin URI:        https://github.com/saqibsarwar/Quick-and-Easy-Testimonials
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This plugin provides a quick and easy way to add testimonials to your site.
  * Version:           1.0.0
  * Author:            M Saqib Sarwar
  * Author URI:        http://saqibsarwar.com/

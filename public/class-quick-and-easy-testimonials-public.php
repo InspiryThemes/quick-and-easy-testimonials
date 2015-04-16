@@ -61,18 +61,6 @@ class Quick_And_Easy_Testimonials_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Quick_And_Easy_Testimonials_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Quick_And_Easy_Testimonials_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/quick-and-easy-testimonials-public.css', array(), $this->version, 'all' );
 
 	}
@@ -84,19 +72,8 @@ class Quick_And_Easy_Testimonials_Public {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Quick_And_Easy_Testimonials_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Quick_And_Easy_Testimonials_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/quick-and-easy-testimonials-public.js', array( 'jquery' ), $this->version, false );
+        // not needed for now
+		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/quick-and-easy-testimonials-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
@@ -133,15 +110,18 @@ class Quick_And_Easy_Testimonials_Public {
 
         ob_start();
 
+        // basic query
         $testimonials_query_args = array(
             'post_type' => 'testimonial',
             'posts_per_page' => $count,
         );
 
+        // modify query based on id attribute
         if ( ! empty ( $id ) && 0 < intval( $id ) ) {
             $testimonials_query_args['p'] = intval( $id );
         }
 
+        // modify query based on filter attribute
         if ( ! empty ( $filter_array ) ) {
             $testimonials_query_args['tax_query'] = array(
                 array (
@@ -154,14 +134,17 @@ class Quick_And_Easy_Testimonials_Public {
 
         $testimonials_query = new WP_Query( $testimonials_query_args );
 
-        // Testimonials
+        // Testimonials Loop
         if ( $testimonials_query->have_posts() ) :
             while ( $testimonials_query->have_posts() ) :
                 $testimonials_query->the_post();
+
                 $custom_fields_data = get_post_custom();
+
                 $testimonial_email = '';
                 $testimonial_byline = '';
                 $testimonial_url = '';
+
                 if ( isset (  $custom_fields_data['_gravatar_email'] ) ) {
                     $testimonial_email = $custom_fields_data['_gravatar_email'][0];
                 }
@@ -218,7 +201,7 @@ class Quick_And_Easy_Testimonials_Public {
             endwhile;
         endif;
 
-        // All the custom loops ends here so reset the query
+        // custom loops ends here so reset the query
         wp_reset_query();
 
         return ob_get_clean();

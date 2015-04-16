@@ -140,7 +140,7 @@ class Quick_And_Easy_Testimonials {
 	private function set_locale() {
 
 		$plugin_i18n = new Quick_And_Easy_Testimonials_i18n();
-		$plugin_i18n->set_domain( $this->get_plugin_name() );
+		$plugin_i18n->set_domain( 'qe-testimonials' );
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
