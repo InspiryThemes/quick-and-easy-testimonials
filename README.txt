@@ -3,7 +3,7 @@ Contributors: saqibsarwar
 Tags: testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 4.3
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,6 @@ This plugin provides a quick and easy way to add testimonials to your site.
 
 == Screenshots ==
 1. Add Testimonial
-1. Testimonials admin side list
 1. List of testimonials on front end
 
 == Changelog ==
