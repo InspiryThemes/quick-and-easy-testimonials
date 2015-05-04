@@ -194,6 +194,10 @@ class Quick_And_Easy_Testimonials {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
         $this->loader->add_action( 'init', $plugin_public, 'register_testimonials_shortcodes' );
 
+        if ( class_exists('Vc_Manager') ) {
+            $this->loader->add_action( 'vc_before_init', $plugin_public, 'integrate_shortcode_with_vc' );
+        }
+
 	}
 
 	/**

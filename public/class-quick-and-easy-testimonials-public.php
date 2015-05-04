@@ -208,4 +208,49 @@ class Quick_And_Easy_Testimonials_Public {
 
     }
 
+    /**
+     * Integrate shortcode with Visual Composer
+     *
+     * @since   1.0.1
+     */
+    public function integrate_shortcode_with_vc() {
+
+        vc_map( array(
+            "name" => __( "Quick and Easy Testimonials", "qe-testimonials" ),
+            "description" => __( "Quick and Easy Testimonials Shortcode", "qe-testimonials" ),
+            "base" => "testimonials",
+            "category" => __( "Content", "qe-testimonials" ),
+            "params" => array (
+                array(
+                    "type" => "dropdown",
+                    "heading" => __( "Number of Testimonials", "qe-testimonials" ),
+                    "param_name" => "count",
+                    "value" => array(
+                        __('All','framework') => -1,
+                        '1' => 1,
+                        '2' => 2,
+                        '3' => 3,
+                        '4' => 4,
+                        '5' => 5,
+                        '6' => 6,
+                        '7' => 7,
+                        '8' => 8,
+                        '9' => 9,
+                        '10' => 10,
+                    ),
+                    'admin_label' => true,
+                ),
+                array(
+                    "type" => "textfield",
+                    "heading" => __( "Testimonial ID (optional)", "qe-testimonials" ),
+                    "description" => __( "Provide ID to display a specific testimonial.", "qe-testimonials" ),
+                    "param_name" => "id",
+                    "value" => '',
+                    'admin_label' => true,
+                ),
+            )
+        ) );
+
+    }
+
 }
