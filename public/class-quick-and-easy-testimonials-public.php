@@ -248,9 +248,35 @@ class Quick_And_Easy_Testimonials_Public {
                     "value" => '',
                     'admin_label' => true,
                 ),
+                /*array(
+                    "type" => "checkbox",
+                    "heading" => __( "Filter by Testimonials Group", "framework" ),
+                    "param_name" => "filter",
+                    "value" => apply_filters( 'qe_testimonials_categories', array() ),
+                    'admin_label' => true,
+                ),*/
             )
         ) );
 
+    }
+
+    /**
+     * Integrate shortcode with Visual Composer
+     *
+     * @since   1.0.1
+     */
+    public function qe_testimonials_category_terms( $categories_array ) {
+
+        // testimonial category
+        $testimonials_categories_array = array();
+        $testimonials_categories = get_terms( 'testimonial-category' );
+        if ( ! empty( $testimonials_categories ) && ! is_wp_error( $testimonials_categories ) ){
+            foreach ( $testimonials_categories as $testimonial_category ) {
+                $testimonials_categories_array[ $testimonial_category->name ] = $testimonial_category->slug;
+            }
+        }
+
+        return $testimonials_categories_array;
     }
 
 }
