@@ -11,6 +11,7 @@ This plugin provides a quick and easy way to add testimonials to your site.
 * Testimonials text and links styles are inherited from currently active theme.
 * Translation Ready and comes with related pot and po files.
 * Works fine with RTL (Right to Left) languages as styles are center aligned. ( No special styles are included for RTL )
+* Compatible with Visual Composer Plugin
 
 ### Documentation
 

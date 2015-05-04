@@ -2,8 +2,8 @@
 Contributors: saqibsarwar
 Tags: testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 4.0
-Tested up to: 4.1
-Stable tag: 1.0.0
+Tested up to: 4.2.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,7 @@ This plugin provides a quick and easy way to add testimonials to your site.
 ### Preview
 
 - [Plugin Preview](http://saqibsarwar.com/plugin-previews/quick-and-easy-testimonials/)
+- [GitHub Repository](https://github.com/saqibsarwar/Quick-and-Easy-Testimonials)
 
 ### Features
 
@@ -24,6 +25,7 @@ This plugin provides a quick and easy way to add testimonials to your site.
 * Testimonials text and links styles are inherited from currently active theme.
 * Translation Ready and comes with related pot and po files.
 * Works fine with RTL (Right to Left) languages as styles are center aligned. ( No special styles are included for RTL )
+* Compatible with Visual Composer Plugin
 
 ### Documentation
 
@@ -45,6 +47,9 @@ This plugin provides a quick and easy way to add testimonials to your site.
 1. List of testimonials on front end
 
 == Changelog ==
+
+= 1.0.1 =
+* Added Visual Composer Plugin Compatibility
 
 = 1.0.0 =
 * Initial Release
