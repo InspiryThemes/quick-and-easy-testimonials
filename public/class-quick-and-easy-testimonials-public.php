@@ -158,7 +158,7 @@ class Quick_And_Easy_Testimonials_Public {
                 }
 
                 ?>
-                <div id="qe-testimonial-<?php the_ID(); ?>" class="qe-testimonial-wrapper" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <div id="qe-testimonial-<?php the_ID(); ?>" class="qe-testimonial-wrapper">
 
                     <div class="qe-testimonial-meta">
 
@@ -173,12 +173,12 @@ class Quick_And_Easy_Testimonials_Public {
                         }
                         ?>
 
-                        <cite class="qe-testimonial-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                            <span class="qe-testimonial-name" itemprop="name"><?php the_title(); ?></span>
+                        <cite class="qe-testimonial-author">
+                            <span class="qe-testimonial-name"><?php the_title(); ?></span>
                             <?php
                             if ( ! empty ( $testimonial_byline ) ) {
                                 ?>
-                                <span class="qe-testimonial-byline" itemprop="jobTitle">
+                                <span class="qe-testimonial-byline">
                                 <?php
                                 echo empty ( $testimonial_url ) ? '' : '<a href="' . $testimonial_url . '" target="_blank">' ;
                                 echo $testimonial_byline;
@@ -192,7 +192,7 @@ class Quick_And_Easy_Testimonials_Public {
 
                     </div><!-- /.qe-testimonial-meta -->
 
-                    <blockquote class="qe-testimonial-text" itemprop="reviewBody">
+                    <blockquote class="qe-testimonial-text">
                         <?php the_content(); ?>
                     </blockquote><!-- /.qe-testimonial-text -->
 
