@@ -2,8 +2,8 @@
 Contributors: saqibsarwar
 Tags: testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.0.2
+Tested up to: 4.4
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,11 +12,6 @@ This plugin provides a quick and easy way to add testimonials to your site.
 == Description ==
 
 This plugin provides a quick and easy way to add testimonials to your site.
-
-### Preview
-
-- [Plugin Preview](http://saqibsarwar.com/plugin-previews/quick-and-easy-testimonials/)
-- [GitHub Repository](https://github.com/saqibsarwar/Quick-and-Easy-Testimonials)
 
 ### Features
 
@@ -34,6 +29,10 @@ This plugin provides a quick and easy way to add testimonials to your site.
 * Display only testimonials related to a category. Shortcode `[testimonials filter="category-slug"]`
 * Display single testimonial. Shortcode `[testimonials id="123"]`
 
+### Github
+
+- [GitHub Repository](https://github.com/saqibsarwar/Quick-and-Easy-Testimonials)
+
 == Installation ==
 
 1. Unzip the downloaded package
@@ -47,6 +46,9 @@ This plugin provides a quick and easy way to add testimonials to your site.
 1. List of testimonials on front end
 
 == Changelog ==
+
+= 1.0.3 =
+* Tested for WordPress 4.4
 
 = 1.0.2 =
 * Tested for WordPress 4.3

@@ -2,8 +2,6 @@
 
 This plugin provides a quick and easy way to add testimonials to your site.
 
-[Plugin Preview](http://saqibsarwar.com/plugin-previews/quick-and-easy-testimonials/)
-
 ### Features
 
 * Easily add testimonial using custom post type ( This post type is not public to avoid detail page URLs mess ).
