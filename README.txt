@@ -1,9 +1,9 @@
 === Quick and Easy Testimonials ===
-Contributors: saqibsarwar
+Contributors: inspirythemes, saqibsarwar
 Tags: testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 4.0
-Tested up to: 4.4
-Stable tag: 1.0.3
+Tested up to: 4.7.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ This plugin provides a quick and easy way to add testimonials to your site.
 
 ### Github
 
-- [GitHub Repository](https://github.com/saqibsarwar/Quick-and-Easy-Testimonials)
+- [GitHub Repository](https://github.com/InspiryThemes/quick-and-easy-testimonials)
 
 == Installation ==
 
