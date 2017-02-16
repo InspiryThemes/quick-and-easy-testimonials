@@ -47,6 +47,11 @@ This plugin provides a quick and easy way to add testimonials to your site.
 
 == Changelog ==
 
+= 1.0.4 =
+* Tested for WordPress 4.7.2
+* Updated translation files.
+* Improved styles for twentyseventeen theme
+
 = 1.0.3 =
 * Tested for WordPress 4.4
 
