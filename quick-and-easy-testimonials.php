@@ -9,7 +9,7 @@
  * Plugin Name:       Quick and Easy Testimonials
  * Plugin URI:        https://github.com/InspiryThemes/quick-and-easy-testimonials
  * Description:       This plugin provides a quick and easy way to add testimonials to your site.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Inspiry Themes
  * Author URI:        http://inspirythemes.com/
  * License:           GPL-2.0+
