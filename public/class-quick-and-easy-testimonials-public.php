@@ -96,6 +96,7 @@ class Quick_And_Easy_Testimonials_Public {
     public function display_testimonials_list( $attributes ) {
 
         extract( shortcode_atts( array(
+            'random' => null,	  
             'count' => -1,
             'filter' => null,
             'id' => null,
@@ -119,6 +120,9 @@ class Quick_And_Easy_Testimonials_Public {
         // modify query based on id attribute
         if ( ! empty ( $id ) && 0 < intval( $id ) ) {
             $testimonials_query_args['p'] = intval( $id );
+        }
+        if ( ! empty ( $random ) ) {
+            $testimonials_query_args['orderby'] = 'rand';
         }
 
         // modify query based on filter attribute
