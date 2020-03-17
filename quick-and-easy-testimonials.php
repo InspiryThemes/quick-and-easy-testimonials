@@ -60,7 +60,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-quick-and-easy-testimonial
  * @param   array $attributes     Array of attributes
  * @return  string  generated html
  */
-function display_testimonials_list( $count =-1, $filter = null, $id = null) {
+function qet_display_testimonials_list( $count =-1, $filter = null, $id = null) {
 
 		$filter_array = array();
 
