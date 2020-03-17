@@ -69,7 +69,12 @@ class Quick_And_Easy_Testimonials {
 	public function __construct() {
 
 		$this->plugin_name = 'quick-and-easy-testimonials';
-		$this->version = '1.0.0';
+
+		if ( defined( 'QE_TESTIMONIALS_VERSION' ) ) {
+			$this->version = QE_TESTIMONIALS_VERSION;
+		} else {
+			$this->version = '1.0.0';
+		}
 
 		$this->load_dependencies();
 		$this->set_locale();

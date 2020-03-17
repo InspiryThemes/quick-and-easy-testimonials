@@ -9,7 +9,7 @@
  * Plugin Name:       Quick and Easy Testimonials
  * Plugin URI:        https://github.com/InspiryThemes/quick-and-easy-testimonials
  * Description:       This plugin provides a quick and easy way to add testimonials to your site.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            Inspiry Themes
  * Author URI:        http://inspirythemes.com/
  * License:           GPL-2.0+
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'QE_TESTIMONIALS_BASE', plugin_basename( __FILE__ ) );
-
+define( 'QE_TESTIMONIALS_VERSION', '1.0.7' );
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-quick-and-easy-testimonials-activator.php
@@ -56,7 +56,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-quick-and-easy-testimonial
 /**
  * Display testimonials in a list programmatically
  *
- * @since   1.0.6
+ * @since   1.0.7
  * @param   array $attributes     Array of attributes
  * @return  string  generated html
  */
