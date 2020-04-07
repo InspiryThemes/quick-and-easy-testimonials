@@ -1,9 +1,9 @@
 === Quick and Easy Testimonials ===
-Contributors: inspirythemes, saqibsarwar
+Contributors: inspirythemes, saqibsarwar, sungraizfaryad
 Tags: testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 4.6
-Tested up to: 5.3.2
-Stable tag: 1.0.7
+Tested up to: 5.4
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ This plugin provides a quick and easy way to add testimonials to your site.
 1. List of testimonials on front end
 
 == Changelog ==
+
+= 1.0.8 =
+* Tested for WordPress 5.4
 
 = 1.0.7 =
 * Scripts and Styles Enqueue Optimized
