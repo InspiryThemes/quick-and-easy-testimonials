@@ -1,5 +1,5 @@
 === Quick and Easy Testimonials ===
-Contributors: inspirythemes, saqibsarwar, sungraizfaryad
+Contributors: inspirythemes, saqibsarwar, fahidjavid
 Tags: testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 4.6
 Tested up to: 5.5
