@@ -24,7 +24,13 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'QE_TESTIMONIALS_BASE', plugin_basename( __FILE__ ) );
-define( 'QE_TESTIMONIALS_VERSION', '1.0.9' );
+
+
+if ( ! function_exists( 'get_plugin_data' ) ) {
+	require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+}
+
+define( 'QE_TESTIMONIALS_VERSION', get_plugin_data( __FILE__ )['Version'] );
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-quick-and-easy-testimonials-activator.php
