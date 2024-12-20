@@ -3,9 +3,10 @@
  * Plugin Name:       Quick and Easy Testimonials
  * Plugin URI:        https://wordpress.org/plugins/quick-and-easy-testimonials/
  * Description:       This plugin provides a quick and easy way to add testimonials to your site.
- * Version:           1.1.2
- * Tested up to:      6.6.0
- * Requires PHP:      5.6
+ * Version:           1.1.3
+ * Tested up to:      6.7.1
+ * Requires at least: 6.0
+ * Requires PHP:      7.4
  * Author:            InspiryThemes
  * Author URI:        https://inspirythemes.com/
  * License:           GPL-2.0+
@@ -183,7 +184,7 @@ function qet_display_testimonials_list( $count = -1, $filter = null, $id = null 
  *
  * @since 1.1.3
  *
- * @param string $key   Key to fetch plugin detail
+ * @param string $key Key to fetch plugin detail
  *
  * @return string|mixed
  */
@@ -191,9 +192,9 @@ function qet_get_plugin_details( $key = 'Version' ) {
 	require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 	// Prevent early translation call by setting $translate to false.
-	$plugin_data = get_plugin_data( __FILE__,false,false );
+	$plugin_data = get_plugin_data( __FILE__, false, false );
 
-	return $plugin_data[$key];
+	return $plugin_data[ $key ];
 }
 
 
