@@ -38,26 +38,26 @@ class Quick_And_Easy_Testimonials_Post_Type {
     public function register_testimonials_post_type() {
 
         $labels = array(
-            'name'                => _x( 'Testimonials', 'Post Type General Name', 'qe-testimonials' ),
-            'singular_name'       => _x( 'Testimonial', 'Post Type Singular Name', 'qe-testimonials' ),
-            'menu_name'           => __( 'Testimonials', 'qe-testimonials' ),
-            'name_admin_bar'      => __( 'Testimonials', 'qe-testimonials' ),
-            'parent_item_colon'   => __( 'Parent Testimonial:', 'qe-testimonials' ),
-            'all_items'           => __( 'All Testimonials', 'qe-testimonials' ),
-            'add_new_item'        => __( 'Add New Testimonial', 'qe-testimonials' ),
-            'add_new'             => __( 'Add New', 'qe-testimonials' ),
-            'new_item'            => __( 'New Testimonial', 'qe-testimonials' ),
-            'edit_item'           => __( 'Edit Testimonial', 'qe-testimonials' ),
-            'update_item'         => __( 'Update Testimonial', 'qe-testimonials' ),
-            'view_item'           => __( 'View Testimonial', 'qe-testimonials' ),
-            'search_items'        => __( 'Search Testimonial', 'qe-testimonials' ),
-            'not_found'           => __( 'Not found', 'qe-testimonials' ),
-            'not_found_in_trash'  => __( 'Not found in Trash', 'qe-testimonials' ),
+            'name'                => _x( 'Testimonials', 'Post Type General Name', QAET_TEXT_DOMAIN ),
+            'singular_name'       => _x( 'Testimonial', 'Post Type Singular Name', QAET_TEXT_DOMAIN ),
+            'menu_name'           => __( 'Testimonials', QAET_TEXT_DOMAIN ),
+            'name_admin_bar'      => __( 'Testimonials', QAET_TEXT_DOMAIN ),
+            'parent_item_colon'   => __( 'Parent Testimonial:', QAET_TEXT_DOMAIN ),
+            'all_items'           => __( 'All Testimonials', QAET_TEXT_DOMAIN ),
+            'add_new_item'        => __( 'Add New Testimonial', QAET_TEXT_DOMAIN ),
+            'add_new'             => __( 'Add New', QAET_TEXT_DOMAIN ),
+            'new_item'            => __( 'New Testimonial', QAET_TEXT_DOMAIN ),
+            'edit_item'           => __( 'Edit Testimonial', QAET_TEXT_DOMAIN ),
+            'update_item'         => __( 'Update Testimonial', QAET_TEXT_DOMAIN ),
+            'view_item'           => __( 'View Testimonial', QAET_TEXT_DOMAIN ),
+            'search_items'        => __( 'Search Testimonial', QAET_TEXT_DOMAIN ),
+            'not_found'           => __( 'Not found', QAET_TEXT_DOMAIN ),
+            'not_found_in_trash'  => __( 'Not found in Trash', QAET_TEXT_DOMAIN ),
         );
 
         $args = array(
-            'label'               => __( 'testimonial', 'qe-testimonials' ),
-            'description'         => __( 'Client testimonials', 'qe-testimonials' ),
+            'label'               => __( 'testimonial', QAET_TEXT_DOMAIN ),
+            'description'         => __( 'Client testimonials', QAET_TEXT_DOMAIN ),
             'labels'              => apply_filters( 'qe_testimonials_labels', $labels),
             'supports'            => apply_filters( 'qe_testimonial_supports', array( 'title', 'editor', 'thumbnail' ) ),
             'hierarchical'        => false,
@@ -87,23 +87,23 @@ class Quick_And_Easy_Testimonials_Post_Type {
     public function register_testimonials_category_taxonomy() {
 
         $labels = array(
-            'name'                       => _x( 'Testimonial Categories', 'Taxonomy General Name', 'qe-testimonials' ),
-            'singular_name'              => _x( 'Testimonial Category', 'Taxonomy Singular Name', 'qe-testimonials' ),
-            'menu_name'                  => __( 'Testimonial Category', 'qe-testimonials' ),
-            'all_items'                  => __( 'All Testimonial Categories', 'qe-testimonials' ),
-            'parent_item'                => __( 'Parent Testimonial Category', 'qe-testimonials' ),
-            'parent_item_colon'          => __( 'Parent Testimonial Category:', 'qe-testimonials' ),
-            'new_item_name'              => __( 'New Testimonial Category Name', 'qe-testimonials' ),
-            'add_new_item'               => __( 'Add New Testimonial Category', 'qe-testimonials' ),
-            'edit_item'                  => __( 'Edit Testimonial Category', 'qe-testimonials' ),
-            'update_item'                => __( 'Update Testimonial Category', 'qe-testimonials' ),
-            'view_item'                  => __( 'View Testimonial Category', 'qe-testimonials' ),
-            'separate_items_with_commas' => __( 'Separate Testimonial Categories with commas', 'qe-testimonials' ),
-            'add_or_remove_items'        => __( 'Add or remove Testimonial Categories', 'qe-testimonials' ),
-            'choose_from_most_used'      => __( 'Choose from the most used', 'qe-testimonials' ),
-            'popular_items'              => __( 'Popular Testimonial Categories', 'qe-testimonials' ),
-            'search_items'               => __( 'Search Testimonial Categories', 'qe-testimonials' ),
-            'not_found'                  => __( 'Not Found', 'qe-testimonials' ),
+            'name'                       => _x( 'Testimonial Categories', 'Taxonomy General Name', QAET_TEXT_DOMAIN ),
+            'singular_name'              => _x( 'Testimonial Category', 'Taxonomy Singular Name', QAET_TEXT_DOMAIN ),
+            'menu_name'                  => __( 'Testimonial Category', QAET_TEXT_DOMAIN ),
+            'all_items'                  => __( 'All Testimonial Categories', QAET_TEXT_DOMAIN ),
+            'parent_item'                => __( 'Parent Testimonial Category', QAET_TEXT_DOMAIN ),
+            'parent_item_colon'          => __( 'Parent Testimonial Category:', QAET_TEXT_DOMAIN ),
+            'new_item_name'              => __( 'New Testimonial Category Name', QAET_TEXT_DOMAIN ),
+            'add_new_item'               => __( 'Add New Testimonial Category', QAET_TEXT_DOMAIN ),
+            'edit_item'                  => __( 'Edit Testimonial Category', QAET_TEXT_DOMAIN ),
+            'update_item'                => __( 'Update Testimonial Category', QAET_TEXT_DOMAIN ),
+            'view_item'                  => __( 'View Testimonial Category', QAET_TEXT_DOMAIN ),
+            'separate_items_with_commas' => __( 'Separate Testimonial Categories with commas', QAET_TEXT_DOMAIN ),
+            'add_or_remove_items'        => __( 'Add or remove Testimonial Categories', QAET_TEXT_DOMAIN ),
+            'choose_from_most_used'      => __( 'Choose from the most used', QAET_TEXT_DOMAIN ),
+            'popular_items'              => __( 'Popular Testimonial Categories', QAET_TEXT_DOMAIN ),
+            'search_items'               => __( 'Search Testimonial Categories', QAET_TEXT_DOMAIN ),
+            'not_found'                  => __( 'Not Found', QAET_TEXT_DOMAIN ),
         );
 
         $args = array(
@@ -129,7 +129,7 @@ class Quick_And_Easy_Testimonials_Post_Type {
      * @return  array   $defaults
      */
     public function register_custom_column_headings ( $defaults ) {
-        $new_columns = array( 'image' => __( 'Image', 'qe-testimonials' ) );
+        $new_columns = array( 'image' => __( 'Image', QAET_TEXT_DOMAIN ) );
 
         $last_items = array();
 
@@ -227,7 +227,7 @@ class Quick_And_Easy_Testimonials_Post_Type {
      * @return void
      */
     public function add_testimonial_meta_box () {
-        add_meta_box( 'testimonial-data', __( 'Testimonial Details', 'qe-testimonials' ), array( $this, 'generate_meta_box' ), $this->post_type_name, 'normal', 'high' );
+        add_meta_box( 'testimonial-data', __( 'Testimonial Details', QAET_TEXT_DOMAIN ), array( $this, 'generate_meta_box' ), $this->post_type_name, 'normal', 'high' );
     }
 
     /**
@@ -328,24 +328,24 @@ class Quick_And_Easy_Testimonials_Post_Type {
         $fields = array();
 
         $fields['gravatar_email'] = array(
-            'name' => __( 'Email for Gravatar', 'qe-testimonials' ),
-            'description' => sprintf( __( 'Provide an email address to use a %sGravatar%s, in case of no featured image.', 'qe-testimonials' ), '<a href="' . esc_url( 'http://gravatar.com/' ) . '" target="_blank">', '</a>' ),
+            'name' => __( 'Email for Gravatar', QAET_TEXT_DOMAIN ),
+            'description' => sprintf( __( 'Provide an email address to use a %sGravatar%s, in case of no featured image.', QAET_TEXT_DOMAIN ), '<a href="' . esc_url( 'http://gravatar.com/' ) . '" target="_blank">', '</a>' ),
             'type' => 'text',
             'default' => '',
             'section' => 'info'
         );
 
         $fields['byline'] = array(
-            'name' => __( 'Byline', 'qe-testimonials' ),
-            'description' => __( 'Provide a byline for the customer giving this testimonial (for example: "CEO of ABC Company").', 'qe-testimonials' ),
+            'name' => __( 'Byline', QAET_TEXT_DOMAIN ),
+            'description' => __( 'Provide a byline for the customer giving this testimonial (for example: "CEO of ABC Company").', QAET_TEXT_DOMAIN ),
             'type' => 'text',
             'default' => '',
             'section' => 'info'
         );
 
         $fields['url'] = array(
-            'name' => __( 'Website URL', 'qe-testimonials' ),
-            'description' => __( 'Provide a URL related to this customer (for example: http://companyname.com/ ).', 'qe-testimonials' ),
+            'name' => __( 'Website URL', QAET_TEXT_DOMAIN ),
+            'description' => __( 'Provide a URL related to this customer (for example: http://companyname.com/ ).', QAET_TEXT_DOMAIN ),
             'type' => 'url',
             'default' => '',
             'section' => 'info'
