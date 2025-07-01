@@ -23,7 +23,7 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'QE_TESTIMONIALS_BASE', plugin_basename( __FILE__ ) );
 
 // Plugin text domain.
-define( 'QAET_TEXT_DOMAIN', 'qe-testimonials' );
+define( 'QE_TESTIMONIALS_TEXT_DOMAIN', 'qe-testimonials' );
 
 if ( ! function_exists( 'get_plugin_data' ) ) {
 	require_once( ABSPATH . 'wp-admin/includes/plugin.php' );

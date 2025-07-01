@@ -225,14 +225,14 @@ class Quick_And_Easy_Testimonials_Public {
 
 		vc_map(
 			array(
-				'name'        => __( 'Quick and Easy Testimonials', QAET_TEXT_DOMAIN ),
-				'description' => __( 'Quick and Easy Testimonials Shortcode', QAET_TEXT_DOMAIN ),
+				'name'        => __( 'Quick and Easy Testimonials', QE_TESTIMONIALS_TEXT_DOMAIN ),
+				'description' => __( 'Quick and Easy Testimonials Shortcode', QE_TESTIMONIALS_TEXT_DOMAIN ),
 				'base'        => 'testimonials',
-				'category'    => __( 'Content', QAET_TEXT_DOMAIN ),
+				'category'    => __( 'Content', QE_TESTIMONIALS_TEXT_DOMAIN ),
 				'params'      => array(
 					array(
 						'type'        => 'dropdown',
-						'heading'     => __( 'Number of Testimonials', QAET_TEXT_DOMAIN ),
+						'heading'     => __( 'Number of Testimonials', QE_TESTIMONIALS_TEXT_DOMAIN ),
 						'param_name'  => 'count',
 						'value'       => array(
 							__( 'All', 'framework' ) => -1,
@@ -251,8 +251,8 @@ class Quick_And_Easy_Testimonials_Public {
 					),
 					array(
 						'type'        => 'textfield',
-						'heading'     => __( 'Testimonial ID (optional)', QAET_TEXT_DOMAIN ),
-						'description' => __( 'Provide ID to display a specific testimonial.', QAET_TEXT_DOMAIN ),
+						'heading'     => __( 'Testimonial ID (optional)', QE_TESTIMONIALS_TEXT_DOMAIN ),
+						'description' => __( 'Provide ID to display a specific testimonial.', QE_TESTIMONIALS_TEXT_DOMAIN ),
 						'param_name'  => 'id',
 						'value'       => '',
 						'admin_label' => true,
