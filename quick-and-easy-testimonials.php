@@ -22,6 +22,8 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'QE_TESTIMONIALS_BASE', plugin_basename( __FILE__ ) );
 
+// Plugin text domain.
+define( 'QAET_TEXT_DOMAIN', 'quick-and-easy-testimonials' );
 
 if ( ! function_exists( 'get_plugin_data' ) ) {
 	require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
