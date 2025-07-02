@@ -2,8 +2,8 @@
 Contributors: inspirythemes, saqibsarwar, fahidjavid
 Tags: testimonial, testimonials, testimonials list, reviews, filtered testimonials
 Requires at least: 6.0
-Tested up to: 6.7.1
-Stable tag: 1.1.3
+Tested up to: 6.8.1
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,12 @@ This plugin provides a quick and easy way to add testimonials to your site.
 1. List of testimonials on front end
 
 == Changelog ==
+
+= 1.1.4 =
+* Improved the text-domain functionality for better compatibility
+* Improved gettext translation throughout the plugin
+* Updated language POT file
+* Tested plugin with WordPress 6.8.1
 
 = 1.1.3 =
 * Fixed text-domain notice
