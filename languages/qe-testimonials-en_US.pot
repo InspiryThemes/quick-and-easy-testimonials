@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quick and Easy Testimonials\n"
-"POT-Creation-Date: 2024-12-20 16:18+0500\n"
+"POT-Creation-Date: 2025-07-02 21:48+0500\n"
 "PO-Revision-Date: 2015-04-16 13:48+0500\n"
 "Last-Translator: M Saqib Sarwar <saqibsarwar@gmail.com>\n"
 "Language-Team: M Saqib Sarwar <saqibsarwar@gmail.com>\n"
@@ -11,12 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -157,42 +156,42 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:132
+#: admin/class-quick-and-easy-testimonials-post-type.php:134
 msgid "Image"
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:230
+#: admin/class-quick-and-easy-testimonials-post-type.php:236
 msgid "Testimonial Details"
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:331
+#: admin/class-quick-and-easy-testimonials-post-type.php:339
 msgid "Email for Gravatar"
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:332
+#: admin/class-quick-and-easy-testimonials-post-type.php:340
 #, php-format
 msgid ""
 "Provide an email address to use a %sGravatar%s, in case of no featured image."
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:339
+#: admin/class-quick-and-easy-testimonials-post-type.php:347
 msgid "Byline"
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:340
+#: admin/class-quick-and-easy-testimonials-post-type.php:348
 msgid ""
 "Provide a byline for the customer giving this testimonial (for example: "
 "\"CEO of ABC Company\")."
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:347
+#: admin/class-quick-and-easy-testimonials-post-type.php:355
 msgid "Website URL"
 msgstr ""
 
-#: admin/class-quick-and-easy-testimonials-post-type.php:348
+#: admin/class-quick-and-easy-testimonials-post-type.php:356
 msgid ""
-"Provide a URL related to this customer (for example: http://companyname."
-"com/ )."
+"Provide a URL related to this customer (for example: https://"
+"companyname.com/ )."
 msgstr ""
 
 #: public/class-quick-and-easy-testimonials-public.php:228
