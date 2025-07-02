@@ -35,7 +35,7 @@ class Quick_And_Easy_Testimonials {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Quick_And_Easy_Testimonials_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Quick_And_Easy_Testimonials_Loader $loader Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,7 +44,7 @@ class Quick_And_Easy_Testimonials {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var      string $plugin_name The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
 
@@ -53,7 +53,7 @@ class Quick_And_Easy_Testimonials {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $version    The current version of the plugin.
+	 * @var      string $version The current version of the plugin.
 	 */
 	protected $version;
 
@@ -118,10 +118,10 @@ class Quick_And_Easy_Testimonials {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-quick-and-easy-testimonials-admin.php';
 
-        /**
-         * The class responsible for testimonial custom post type
-         */
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-quick-and-easy-testimonials-post-type.php';
+		/**
+		 * The class responsible for testimonial custom post type
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-quick-and-easy-testimonials-post-type.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -165,22 +165,22 @@ class Quick_And_Easy_Testimonials {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-        // Testimonial custom post type
-        $testimonial_post_type = new Quick_And_Easy_Testimonials_Post_Type();
+		// Testimonial custom post type
+		$testimonial_post_type = new Quick_And_Easy_Testimonials_Post_Type();
 
-        $this->loader->add_action( 'init', $testimonial_post_type, 'register_testimonials_post_type' );
-        $this->loader->add_action( 'init', $testimonial_post_type, 'register_testimonials_category_taxonomy' );
+		$this->loader->add_action( 'init', $testimonial_post_type, 'register_testimonials_post_type' );
+		$this->loader->add_action( 'init', $testimonial_post_type, 'register_testimonials_category_taxonomy' );
 
-        if ( is_admin() ) {
-            global $pagenow;
-            if ( $pagenow == 'edit.php' && isset( $_GET['post_type'] ) && esc_attr( $_GET['post_type'] ) == $testimonial_post_type->post_type_name ) {
-                $this->loader->add_filter( 'manage_edit-' . $testimonial_post_type->post_type_name . '_columns', $testimonial_post_type, 'register_custom_column_headings' );
-                $this->loader->add_action( 'manage_posts_custom_column', $testimonial_post_type, 'register_custom_column' );
-            }
-        }
+		if ( is_admin() ) {
+			global $pagenow;
+			if ( $pagenow == 'edit.php' && isset( $_GET['post_type'] ) && esc_attr( $_GET['post_type'] ) == $testimonial_post_type->post_type_name ) {
+				$this->loader->add_filter( 'manage_edit-' . $testimonial_post_type->post_type_name . '_columns', $testimonial_post_type, 'register_custom_column_headings' );
+				$this->loader->add_action( 'manage_posts_custom_column', $testimonial_post_type, 'register_custom_column' );
+			}
+		}
 
-        $this->loader->add_action( 'admin_menu', $testimonial_post_type, 'add_testimonial_meta_box' );
-        $this->loader->add_action( 'save_post', $testimonial_post_type, 'save_testimonial_meta_box' );
+		$this->loader->add_action( 'admin_menu', $testimonial_post_type, 'add_testimonial_meta_box' );
+		$this->loader->add_action( 'save_post', $testimonial_post_type, 'save_testimonial_meta_box' );
 
 	}
 
@@ -197,12 +197,12 @@ class Quick_And_Easy_Testimonials {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-        $this->loader->add_action( 'init', $plugin_public, 'register_testimonials_shortcodes' );
-        //$this->loader->add_filter( 'qe_testimonials_categories', $plugin_public, 'qe_testimonials_category_terms' );
+		$this->loader->add_action( 'init', $plugin_public, 'register_testimonials_shortcodes' );
+		//$this->loader->add_filter( 'qe_testimonials_categories', $plugin_public, 'qe_testimonials_category_terms' );
 
-        if ( class_exists('Vc_Manager') ) {
-            $this->loader->add_action( 'vc_before_init', $plugin_public, 'integrate_shortcode_with_vc' );
-        }
+		if ( class_exists( 'Vc_Manager' ) ) {
+			$this->loader->add_action( 'vc_before_init', $plugin_public, 'integrate_shortcode_with_vc' );
+		}
 
 	}
 
@@ -246,21 +246,21 @@ class Quick_And_Easy_Testimonials {
 		return $this->version;
 	}
 
-    /**
-     * To log any thing for debugging purposes
-     *
-     * @since   1.0.0
-     *
-     * @param   mixed   $message    message to be logged
-     */
-    public static function log( $message ) {
-        if( WP_DEBUG === true ){
-            if( is_array( $message ) || is_object( $message ) ){
-                error_log( print_r( $message, true ) );
-            } else {
-                error_log( $message );
-            }
-        }
-    }
+	/**
+	 * To log any thing for debugging purposes
+	 *
+	 * @since   1.0.0
+	 *
+	 * @param mixed $message message to be logged
+	 */
+	public static function log( $message ) {
+		if ( WP_DEBUG === true ) {
+			if ( is_array( $message ) || is_object( $message ) ) {
+				error_log( print_r( $message, true ) );
+			} else {
+				error_log( $message );
+			}
+		}
+	}
 
 }

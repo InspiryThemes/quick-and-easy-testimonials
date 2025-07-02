@@ -27,7 +27,7 @@ class Quick_And_Easy_Testimonials_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string $plugin_name The ID of this plugin.
 	 */
 	private $plugin_name;
 
@@ -36,7 +36,7 @@ class Quick_And_Easy_Testimonials_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
+	 * @var      string $version The current version of this plugin.
 	 */
 	private $version;
 
@@ -44,13 +44,14 @@ class Quick_And_Easy_Testimonials_Admin {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
+	 *
+	 * @param string $plugin_name The name of this plugin.
+	 * @param string $version     The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
 
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+		$this->version     = $version;
 
 	}
 
@@ -61,7 +62,7 @@ class Quick_And_Easy_Testimonials_Admin {
 	 */
 	public function enqueue_styles() {
 
-        // not needed for now
+		// not needed for now
 		// wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/quick-and-easy-testimonials-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -73,7 +74,7 @@ class Quick_And_Easy_Testimonials_Admin {
 	 */
 	public function enqueue_scripts() {
 
-        // not needed for now
+		// not needed for now
 		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/quick-and-easy-testimonials-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
